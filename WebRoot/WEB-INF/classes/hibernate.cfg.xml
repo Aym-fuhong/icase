@@ -7,14 +7,29 @@
 
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="hibernate.connection.url">jdbc:mysql://127.0.0.1/mydatabase</property>
+		<property name="hibernate.connection.url">jdbc:mysql://127.0.0.1/icase</property>
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password">root</property>
 		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
 		<property name="hibernate.format_sql">true</property>
-		<mapping resource="com/snnu/edu/entity/User.hbm.xml"/>
-		
-    
-
+		<mapping resource="com/snnu/edu/entity/user.hbm.xml" />
+		<mapping resource="com/snnu/edu/entity/limit.hbm.xml" />
+		<mapping resource="com/snnu/edu/entity/field.hbm.xml" />
+		<mapping resource="com/snnu/edu/entity/position.hbm.xml" />
+		<mapping resource="com/snnu/edu/entity/study_field.hbm.xml" />
+		<mapping resource="com/snnu/edu/entity/message.hbm.xml" />
+		<mapping resource="com/snnu/edu/entity/email.hbm.xml" />
+		<mapping resource="com/snnu/edu/entity/deliver_script.hbm.xml" />
+		<mapping resource="com/snnu/edu/entity/Manuscript.hbm.xml" />
+		<mapping resource="com/snnu/edu/entity/Editor_script.hbm.xml" />
+		<mapping resource="com/snnu/edu/entity/Subeditor_script.hbm.xml" />
+		<mapping resource="com/snnu/edu/entity/Reader_script.hbm.xml" />
+<!-- 		<mapping resource="com/snnu/edu/entity/Reader_Suggestion.hbm.xml" /> -->
+		<mapping resource="com/snnu/edu/entity/Chiefeditor_script.hbm.xml" />
+		<mapping resource="com/snnu/edu/entity/Recruit.hbm.xml" />
+		<mapping resource="com/snnu/edu/entity/Fire.hbm.xml" />
+		<mapping resource="com/snnu/edu/entity/Assess.hbm.xml" />
+		<mapping resource="com/snnu/edu/entity/Thesis.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>

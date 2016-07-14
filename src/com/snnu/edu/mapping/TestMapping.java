@@ -1,6 +1,9 @@
 package com.snnu.edu.mapping;
 
-import com.snnu.edu.entity.Users;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.tool.hbm2ddl.SchemaExport;
+
+import com.snnu.edu.entity.User;
 import com.snnu.edu.serviceInterface.UserService;
 import com.snnu.edu.serviceInterface.impl.UserServiceImpl;
 
@@ -32,12 +35,12 @@ public class TestMapping {
 //	}
 	
 	public static void main(String[] args) {
-//		Configuration  cfg=new Configuration().configure();
-//		SchemaExport export=new SchemaExport(cfg);
-//		export.create(true, true);
-		Users user = new Users(1,"000000","张三", "2016-03-19", "2018-03-19");
-		UserService  us = new UserServiceImpl();
-	    us.saveOrUpdateUsers(user);
+		Configuration  cfg=new Configuration().configure();
+		SchemaExport export=new SchemaExport(cfg);
+		export.create(true, true);
+//		User user = new User(1,"000000","张三", "2016-03-19", "2018-03-19");
+//		UserService  us = new UserServiceImpl();
+//	    us.saveOrUpdateUsers(user);
 		
 	}
 

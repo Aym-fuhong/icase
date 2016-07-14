@@ -3,12 +3,12 @@ package com.snnu.edu.serviceInterface.impl;
 import java.util.List;
 
 import com.snnu.edu.dao.BaseDao;
-import com.snnu.edu.entity.Users;
+import com.snnu.edu.entity.User;
 import com.snnu.edu.serviceInterface.UserService;
 @SuppressWarnings("unchecked")
 public class UserServiceImpl implements UserService{
 	
-	public   boolean saveOrUpdateUsers(Users user){
+	public   boolean saveOrUpdateUsers(User user){
 		try {
 			BaseDao.saveOrUpdateObj(user);
 			return true;
@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService{
 		
 	}
 	
-	public   boolean delUserInfo(Users user){
+	public   boolean delUserInfo(User user){
 		try {
 			BaseDao.deleteObj(user);
 			return true;
@@ -34,13 +34,13 @@ public class UserServiceImpl implements UserService{
 		
 	}
 	
-	public  Users getUserById(String id){
-		return (Users)BaseDao.getObject("from Users where id='"+id+"'");
+	public  User getUserById(String id){
+		return (User)BaseDao.getObject("from Users where id='"+id+"'");
 	}
 	
 	
-	public  List<Users>findWithPage(){
-		return (List<Users>)BaseDao.findWithPage("from Users ");
+	public  List<User>findWithPage(){
+		return (List<User>)BaseDao.findWithPage("from Users ");
 	} 
 
 }
